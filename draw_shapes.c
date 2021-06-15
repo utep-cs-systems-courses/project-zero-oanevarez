@@ -26,3 +26,17 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+/*Prints an arrow*/
+void print_arrow(int leftCol, int size)
+{
+  int totalCol = leftCol * size;
+  for (int row=0; row<size; row++){
+    putchar(' ');
+    for (int col=0; col<totalCol; col++){
+      if (col == 3) putchar('*');
+      putchar(' ');
+    }
+    putchar('\n');
+  }
+}
+
