@@ -4,7 +4,7 @@
 /* Prints a size x size square whose left col is at startCol */
 void print_square(int leftCol, int size)
 {
-  int i, j;
+  
   int endCol = leftCol + size;
   for (int row = 0; row < size; row++){
     int col;
@@ -25,9 +25,19 @@ void print_triangle(int leftCol, int size)
     putchar('\n');
   }
 }
+// print an arrow shape using the above methods
+void print_arrow(int leftCol, int size){
+  print_triangle(5,7);
+  int totalCol = leftCol + size;
+  for (int row =0; row<size; row++){
+    if(row == (leftCol/2))
+      print_square(6,6);
+    putchar(' ');
+  }
+}
 
-/*Prints an arrow*/
-void print_arrow(int leftCol, int size)
+/*Prints an arrow
+void prt_arrow(int leftCol, int size)
 {
   int totalCol = leftCol * size;
   for (int row=0; row<size; row++){
@@ -39,4 +49,5 @@ void print_arrow(int leftCol, int size)
     putchar('\n');
   }
 }
+*/
 
